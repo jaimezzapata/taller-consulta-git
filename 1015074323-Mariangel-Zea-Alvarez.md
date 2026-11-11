@@ -50,4 +50,21 @@ upstream y su diferencia con origin: Si sacas una copia de un repositorio públi
 
 Las ramas (branches) son líneas de desarrollo independientes que permiten aislar el código en un repositorio para trabajar en nuevas funcionalidades, experimentos o correcciones de errores sin alterar la versión principal ni comprometer la estabilidad del sistema. Su uso es una de las prácticas más importantes en el control de versiones, ya que ofrecen ventajas fundamentales tanto en proyectos individuales como colaborativos. En el trabajo individual, permiten organizar las tareas por partes y probar cambios arriesgados con la total tranquilidad de que, si algo sale mal, la rama principal o de producción se mantiene intacta y se puede descartar el experimento sin dañar lo avanzado. Por su parte, en el trabajo en equipo, las ramas evitan que varios desarrolladores interfieran o sobrescriban el trabajo de los demás al mismo tiempo, permitiendo que cada quien desarrolle su tarea en su propia ruta aislada para luego unificar todo de forma segura mediante fusiones (merges) o revisiones de código (pull requests).
 
+6: ¿Qué es GitFlow? Expliquen brevemente la estructura de sus ramas principales (`master`, `develop`, `feature`, `release`, `hotfix`).
+
+GitFlow es un modelo de flujo de trabajo para Git diseñado por Vincent Driessen que establece un marco estructurado y estricto para gestionar el ciclo de vida del desarrollo de software. Define un conjunto específico de ramas y cómo deben interactuar entre sí, facilitando la colaboración en proyectos grandes y organizando los lanzamientos a producción.
+
+Ramas principales de GitFlow:
+
+master: Es la rama principal que contiene el código oficial y estable que está disponible en producción para los usuarios finales. Cada cambio en esta rama representa una versión o lanzamiento oficial del software.
+
+develop: Es la rama de integración para el desarrollo. Reúne todo el código nuevo que se va completando y sirve como base para preparar las próximas actualizaciones o características del sistema.
+
+feature: Son ramas temporales que se crean a partir de develop para desarrollar una funcionalidad específica o tarea en curso. Una vez terminada la característica, se fusiona de nuevo en develop y se elimina.
+
+release: Es una rama que se desprende de develop cuando se va a preparar una nueva versión para producción. Permite realizar pruebas finales, correcciones menores de última hora y ajustes de documentación sin interrumpir el desarrollo de nuevas funciones. Al finalizar, se fusiona tanto en master como en develop.
+
+hotfix: Son ramas de emergencia que se crean directamente desde master para solucionar un error crítico detectado en producción. Una vez corregido el problema, se fusiona de inmediato con master (para actualizar la versión en vivo) y con develop (para que el arreglo no se pierda en los futuros desarrollos).
+
+
 

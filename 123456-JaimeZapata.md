@@ -57,3 +57,21 @@ Ejemplo práctico: Entras a trabajar a una nueva empresa y te dan acceso al proy
 Upstream (y su diferencia con Origin): Ambos son identificadores para repositorios remotos, pero se usan para diferenciar fuentes cuando trabajas con copias (forks). Origin es el repositorio remoto que te pertenece (tu copia en la nube), mientras que Upstream es el repositorio original del proyecto principal del cual sacaste tu copia.
 
 Ejemplo práctico: Quieres aportar a una librería pública de React (Upstream). Como no tienes permisos para editarla directamente, haces una copia hacia tu propia cuenta de GitHub (Origin). Clonas tu Origin a tu PC, haces los cambios, los subes de vuelta a tu Origin (con un push), y desde ahí abres un PR hacia el Upstream pidiendo que acepten tu mejora.
+
+
+Punto 4
+Crear ramas en un proyecto de software es indispensable para aislar los cambios y proteger la estabilidad del código principal. Sirven para generar líneas de tiempo paralelas e independientes dentro del mismo repositorio, donde puedes escribir código, romperlo o modificarlo sin afectar la versión funcional de la aplicación (que usualmente reside en main).
+
+Ventajas en el trabajo individual:
+
+Experimentación segura: Si quieres probar una nueva librería, cambiar un diseño o refactorizar un componente, lo haces en una rama separada. Si el resultado no es el esperado, puedes eliminar la rama y tu código estable sigue intacto.
+
+Cambio ágil de contexto: Te permite tener varias tareas a medias sin que interfieran. Si estás desarrollando una funcionalidad y de repente te piden corregir un error urgente, puedes guardar tus cambios, cambiar a una rama de corrección rápida (hotfix), solucionar el problema y luego volver a tu rama original justo donde la dejaste.
+
+Ventajas en el trabajo en equipo:
+
+Desarrollo en paralelo: Varios desarrolladores pueden trabajar en el mismo proyecto al mismo tiempo. Uno puede estar haciendo la pasarela de pagos en la rama feature-pagos mientras otro diseña el perfil de usuario en feature-perfil, sin que sus archivos choquen constantemente.
+
+Control de calidad y revisión: Las ramas son el paso previo indispensable para los Pull Requests. Permiten que el líder técnico o los compañeros revisen el código de esa rama específica, soliciten cambios y validen que todo funcione antes de autorizar la fusión.
+
+Integridad del producto: Garantizan que a la rama principal solo se integre código maduro, terminado y aprobado. Esto evita que el código incompleto o defectuoso de un miembro del equipo rompa el entorno de pruebas o el de producción para todos los demás.

@@ -72,3 +72,16 @@
 
 ## Protección de la rama principal (main): La rama principal se mantiene siempre limpia, estable y lista para producción, mientras que las pruebas, iteraciones y errores ocurren en entornos controlados y separados.
 
+6. GitFlow se basa en dos ramas principales de vida permanente y tres ramas de soporte temporal:
+
+1. *Ramas Principales (Permanentes)*
+## master (o main): Contiene el código oficial que está actualmente en producción. Cada fusión (merge) en esta rama representa un nuevo lanzamiento y suele estar etiquetada con un número de versión (ej. v1.2.0).
+
+## develop: Es la rama de integración principal. Contiene todo el código nuevo que se está preparando para el siguiente lanzamiento. Los desarrolladores la toman como base para sus nuevas tareas.
+
+ *Ramas de Soporte (Temporales)*
+## feature/... (Características): Se crean a partir de develop para desarrollar nuevas funcionalidades de forma aislada. Una vez terminada la característica, se vuelve a fusionar (merge) en develop y la rama se elimina.
+
+## release/... (Lanzamientos): Cuando develop ya tiene suficientes características para una nueva versión, se crea una rama de lanzamiento a partir de ella. Permite realizar pruebas finales de QA, corrección de pequeños bugs y empaquetado sin interrumpir el desarrollo de la siguiente versión. Al finalizar, se fusiona tanto en master como en develop.
+
+## hotfix/... (Correcciones urgentes): Son ramas creadas directamente desde master para solucionar un error crítico detectado en producción. Una vez resuelto el problema, el cambio se fusiona de inmediato tanto en master como en develop para evitar que el fallo reaparezca en el futuro.

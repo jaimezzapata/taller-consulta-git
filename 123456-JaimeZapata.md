@@ -27,3 +27,33 @@ GitLab: Destaca por incluir herramientas de integración y despliegue continuo (
 Bitbucket: Desarrollada por Atlassian, su mayor atractivo es la integración nativa y profunda con herramientas de gestión de proyectos ágiles como Jira y Trello.
 
 Azure DevOps (Azure Repos): La solución corporativa de Microsoft, muy orientada a empresas que buscan repositorios privados ilimitados y una conexión directa con la infraestructura de la nube de Azure.
+
+Punto tres
+
+Commit: Es como tomarle una foto o guardar un punto de control al estado actual de tus archivos. Registra los cambios específicos que hiciste para que queden guardados en el historial del proyecto de forma permanente.
+
+Ejemplo práctico: Terminaste de armar la estructura HTML del menú de navegación y funciona bien. Haces un commit con el mensaje "Agrega estructura del menú principal" para asegurar ese avance antes de empezar a modificar los estilos CSS, sabiendo que siempre puedes volver a ese punto si rompes algo.
+
+Branch (Rama): Es una línea de tiempo paralela de tu proyecto. Te permite trabajar en nuevas funcionalidades, hacer pruebas o corregir errores sin afectar el código principal o estable (que suele estar en la rama main).
+
+Ejemplo práctico: Tienes una aplicación en producción, pero quieres probar un nuevo diseño para el inicio de sesión. Creas una rama llamada nuevo-login. Si el código falla mientras experimentas, la aplicación original sigue intacta.
+
+Merge (Fusión): Es el proceso de unir el historial y los cambios que hiciste en una rama separada hacia otra rama, generalmente para integrar un trabajo nuevo a la línea principal del proyecto.
+
+Ejemplo práctico: Ya terminaste, probaste y validaste el nuevo diseño en la rama nuevo-login. Ejecutas un merge para pasar esos cambios a la rama main y que la nueva vista pase a ser la oficial.
+
+Pull y Push: Son los comandos utilizados para sincronizar tu entorno local con la nube (como GitHub). Push (empujar) envía tus commits locales al repositorio remoto. Pull (tirar) descarga los cambios que están en la nube y actualiza automáticamente los archivos en tu computadora.
+
+Ejemplo práctico: Un compañero arregló un error anoche; al iniciar tu día, haces un pull para traer su arreglo a tu PC. Luego, terminas una nueva función de la base de datos y haces un push para subirla a la nube y que él pueda descargarla.
+
+Pull Request (PR): Es una petición formal en plataformas web para que otros revisen tu código antes de hacer un merge. Permite discutir los cambios, ver exactamente qué líneas se agregaron o borraron, y aprobar el código antes de integrarlo a la rama principal.
+
+Ejemplo práctico: Desarrollaste la integración de una pasarela de pagos en tu propia rama. Antes de unirla a main, abres un Pull Request. El líder técnico revisa el código, te sugiere cambiar una variable por seguridad, haces la corrección y, una vez aprobado, se fusiona.
+
+Clone (Clonar): Es descargar una copia exacta y completa de un repositorio remoto a tu computadora por primera vez. Esto trae todos los archivos, el historial de commits y las ramas existentes.
+
+Ejemplo práctico: Entras a trabajar a una nueva empresa y te dan acceso al proyecto del sistema de facturación en GitHub. Haces un clone de esa URL para tener la carpeta del proyecto en tu máquina local y empezar a programar.
+
+Upstream (y su diferencia con Origin): Ambos son identificadores para repositorios remotos, pero se usan para diferenciar fuentes cuando trabajas con copias (forks). Origin es el repositorio remoto que te pertenece (tu copia en la nube), mientras que Upstream es el repositorio original del proyecto principal del cual sacaste tu copia.
+
+Ejemplo práctico: Quieres aportar a una librería pública de React (Upstream). Como no tienes permisos para editarla directamente, haces una copia hacia tu propia cuenta de GitHub (Origin). Clonas tu Origin a tu PC, haces los cambios, los subes de vuelta a tu Origin (con un push), y desde ahí abres un PR hacia el Upstream pidiendo que acepten tu mejora.

@@ -15,3 +15,7 @@
 ## Garantizar seguridad y descentralización (cada copia local contiene todo el historial).
 
 ## Permitir experimentar de forma segura sin arriesgar la versión estable del proyecto.
+
+2. ## Git es como la app o el programa que usas en tu compu sin internet. Cada vez que le das a "Guardar versión", el programa toma una foto de cómo va tu trabajo. Si la cagas borrando algo por accidente, puedes presionar un botón y devolverte exactamente a como lo tenías ayer o hace tres horas.
+
+## GitHub es literalmente el Google Drive de los programadores. Es una página web a la que subes las carpetas donde Git tomó esas fotos. Sirve para que tu proyecto no se pierda si a tu laptop le pasa algo, y para que tus compañeros se conecten, descarguen tu avance en sus propias compus y todos trabajen al mismo tiempo sin tirarse el código del otro.

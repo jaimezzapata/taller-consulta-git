@@ -95,3 +95,26 @@ Respuesta pregunta 4:
 * Contribuyes a un proyecto de código abierto de una empresa. Tu propia copia en GitHub es `origin`. El repositorio oficial de la empresa donde descargas las actualizaciones generales es `upstream`.
 
 ---
+
+Respuesta pregunta 5: 
+
+Las **ramas (*branches*)** son una de las características más potentes y fundamentales de Git. Su propósito principal es permitirte trabajar en diferentes versiones de un proyecto de forma simultánea e independiente, sin alterar ni poner en riesgo la línea de desarrollo principal (generalmente llamada `main` o `master`).
+
+### ¿Para qué sirven?
+
+Sirven para aislar los cambios que realizas en el código. Imagina que la rama principal es como la estructura de una casa ya construida y habitable; crear una rama es como levantar una habitación en un plano separado para remodelarla o probar materiales nuevos antes de decidir si se integra definitivamente a la casa.
+
+---
+
+### Ventajas en el trabajo individual
+
+* **Experimentación sin miedo:** Puedes probar librerías nuevas, refactorizar código o implementar lógica compleja sabiendo que, si algo sale mal o rompes la aplicación, puedes simplemente descartar la rama y tu versión estable seguirá intacta.
+* **Organización por tareas:** Te permite mantener tu enfoque dividido por objetivos específicos (por ejemplo, una rama para el diseño estético de la página de inicio, otra para la conexión con la base de datos y otra para un arreglo rápido).
+
+### Ventajas en el trabajo en equipo
+
+* **Desarrollo simultáneo y sin bloqueos:** Varios desarrolladores pueden trabajar en el mismo proyecto al mismo tiempo sin pisarse el código ni sobrescribir el trabajo de los demás, ya que cada uno opera en su propia burbuja temporal (*rama*).
+* **Protección de la rama principal (`main`):** Se establece la regla de oro de que `main` siempre debe contener código limpio, estable y listo para producción. Nadie programa directamente en ella.
+* **Revisiones de calidad más seguras:** Al trabajar en ramas separadas, se facilita la creación de *Pull Requests* para que otros compañeros revisen, prueben y validen el código antes de fusionarlo (*merge*) con el proyecto oficial.
+
+---

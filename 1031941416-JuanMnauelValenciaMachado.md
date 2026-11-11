@@ -22,10 +22,24 @@
 
 3. ## Una nube de repositorios es un servicio en la nube que te permite almacenar, respaldar y gestionar tus proyectos de código que usan Git.
 
-## Alternativas ademas de GitHub:
+* Alternativas ademas de GitHub:
 
 ## GitLab: Es una de las plataformas más completas del mercado. A diferencia de otras, destaca por integrar de forma nativa herramientas muy potentes de CI/CD (integración y despliegue continuo), gestión de proyectos ágiles y seguridad directamente en su interfaz.
 
 ## Bitbucket: Desarrollada por Atlassian, es una alternativa muy elegida por empresas que ya utilizan herramientas de la misma familia como Jira o Trello, ya que se integra perfectamente con ellas. Además, ofrece repositorios privados gratuitos para equipos pequeños.
 
 ## Gitea / Forgejo: Si buscas una opción más ligera o la posibilidad de alojar tu propio servidor de Git en tu propia computadora o servidor privado (auto-hospedaje) en lugar de depender de una gran empresa, estas alternativas de código abierto son excelentes y muy rápidas.
+
+4. ## Commit: Una "foto" o guardado de los cambios actuales en tu código con un mensaje. (Ej: git commit -m "Agregué el menú").
+
+## Branch (Rama): Una línea de trabajo independiente para programar sin afectar el código principal. (Ej: crear feature/login).
+
+## Merge (Fusión): Unir los cambios de una rama con otra. (Ej: pasar el login terminado a la rama principal main).
+
+## Pull y Push: Sincronizar tu PC con la nube. Push sube tus cambios a GitHub; Pull descarga los cambios de otros a tu computadora.
+
+## Pull Request (PR): Una solicitud en GitHub para que revisen tu código antes de unirlo al proyecto oficial.
+
+## Clone (Clonar): Descargar por primera vez un repositorio completo de GitHub a tu computadora.
+
+## Origin y Upstream: Nombres de repositorios remotos. Origin es tu repositorio personal (de donde clonas o subes), y Upstream es el repositorio original del dueño principal en proyectos colaborativos externos.

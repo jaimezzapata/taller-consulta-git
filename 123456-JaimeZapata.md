@@ -75,3 +75,19 @@ Desarrollo en paralelo: Varios desarrolladores pueden trabajar en el mismo proye
 Control de calidad y revisión: Las ramas son el paso previo indispensable para los Pull Requests. Permiten que el líder técnico o los compañeros revisen el código de esa rama específica, soliciten cambios y validen que todo funcione antes de autorizar la fusión.
 
 Integridad del producto: Garantizan que a la rama principal solo se integre código maduro, terminado y aprobado. Esto evita que el código incompleto o defectuoso de un miembro del equipo rompa el entorno de pruebas o el de producción para todos los demás.
+
+
+Punto 5
+GitFlow es un modelo de trabajo (o estrategia de ramificación) estructurado para Git, diseñado para organizar el desarrollo de proyectos complejos de forma predecible. Funciona asignando roles muy específicos a diferentes ramas y definiendo exactamente cómo y cuándo deben interactuar entre sí. Es especialmente útil en proyectos que tienen ciclos de lanzamiento programados o versiones marcadas.
+
+Esta es la estructura de sus ramas principales:
+
+master (o main): Es la rama de producción. Contiene exclusivamente el código estable que ya está publicado y siendo utilizado por los usuarios. Cada modificación que llega a esta rama representa un nuevo lanzamiento o versión oficial del software.
+
+develop: Es la rama central de integración. Contiene los últimos cambios de desarrollo entregados para la próxima versión. De aquí nace el trabajo nuevo y aquí regresa una vez terminado.
+
+feature (características): Son ramas temporales que nacen a partir de develop. Se utilizan para desarrollar nuevas funcionalidades de forma aislada (ej. feature/carrito-compras). Una vez que la funcionalidad está lista y probada, se fusiona de vuelta hacia develop y la rama se elimina.
+
+release (lanzamiento): Nace de develop cuando se tiene el código casi listo para una nueva versión. Sirve como un entorno de preparación donde no se añaden funcionalidades nuevas, sino que se pulen detalles, se arreglan errores menores y se actualiza la documentación. Cuando está lista, se fusiona hacia master (para salir a producción) y de vuelta a develop (para sincronizar cualquier arreglo).
+
+hotfix (parches rápidos): Son ramas de emergencia que nacen directamente de master. Se usan cuando se descubre un error crítico en producción que debe solucionarse de inmediato, sin interrumpir el trabajo de la rama develop. Al solucionar el error, la rama se fusiona hacia master (para aplicar el parche) y también hacia develop (para asegurar que el error no reaparezca en versiones futuras).

@@ -119,3 +119,35 @@ Las ramas permiten **duplicar el estado actual de tu código de forma independie
 * **Desarrollo en paralelo:** Múltiples desarrolladores pueden trabajar simultáneamente en el mismo proyecto sin pisarse ni sobrescribir el trabajo de los demás, ya que cada uno lo hace en su propia rama aislada.
 * **Colaboración segura y revisión de código:** Facilita la creación de *Pull Requests*. Antes de que el código de una rama se una al proyecto principal, el equipo puede revisarlo, comentar sugerencias y aprobar los cambios de forma segura.
 * **Gestión de conflictos controlada:** Git ayuda a identificar y resolver discrepancias cuando dos personas modifican la misma línea de código, permitiendo decidir qué cambios conservar antes de fusionarlos definitivamente.
+
+**Pregunta 6 respuesta**
+
+# 🌊 ¿Qué es GitFlow?
+
+**GitFlow** es un modelo de trabajo (un flujo de ramificación) para Git que define una estructura estricta sobre cómo organizar las ramas en un proyecto. Fue diseñado para facilitar el desarrollo en paralelo, la gestión de versiones (releases) y la corrección rápida de errores en producción de forma muy ordenada.
+
+---
+
+## Estructura de las Ramas Principales
+
+GitFlow divide el trabajo en cinco tipos de ramas con propósitos específicos:
+
+### 1. `master` (o `main`)
+* **Propósito:** Contiene el código oficial y estable que está actualmente en producción (la versión que ven los usuarios finales). 
+* **Regla:** Nadie programa directamente aquí; solo recibe fusiones probadas y listas para el público.
+
+### 2. `develop`
+* **Propósito:** Es la rama central de integración para el siguiente lanzamiento. Contiene todo el código nuevo que ya ha sido programado y está en fase de pruebas.
+* **Regla:** Es el punto de partida y de llegada para las nuevas funciones.
+
+### 3. `feature/` (Ramas de Funcionalidad)
+* **Propósito:** Se crean a partir de `develop` para desarrollar nuevas características o mejoras específicas (ej. `feature/login`, `feature/carrito`).
+* **Regla:** Una vez terminada la función, se fusiona nuevamente hacia `develop` y luego la rama `feature` se elimina.
+
+### 4. `release/` (Ramas de Lanzamiento)
+* **Propósito:** Permiten preparar una nueva versión antes de llevarla a producción (ajustar detalles finales, corregir pequeños errores de última hora o actualizar números de versión).
+* **Regla:** Se crean a partir de `develop` y, al finalizar, se fusionan tanto en `master` como en `develop`.
+
+### 5. `hotfix/` (Ramas de Corrección URGENTE)
+* **Propósito:** Sirven para solucionar un error crítico detectado en producción (`master`) de forma inmediata sin interrumpir el trabajo en curso.
+* **Regla:** Se crean directamente desde `master` y, al solucionarlo, se fusionan de inmediato tanto en `master` como en `develop` para que el error no vuelva a aparecer en futuras versiones.

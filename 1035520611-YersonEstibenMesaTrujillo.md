@@ -118,3 +118,34 @@ Sirven para aislar los cambios que realizas en el código. Imagina que la rama p
 * **Revisiones de calidad más seguras:** Al trabajar en ramas separadas, se facilita la creación de *Pull Requests* para que otros compañeros revisen, prueben y validen el código antes de fusionarlo (*merge*) con el proyecto oficial.
 
 ---
+
+Respuesta pregunta 6: 
+
+**GitFlow** es un modelo de flujo de trabajo para Git diseñado por Vincent Driessen que establece una estructura estricta y organizada de ramas. Está pensado especialmente para proyectos que tienen un ciclo de lanzamientos (*releases*) bien definido, facilitando la gestión de múltiples versiones y el trabajo en equipos grandes.
+
+---
+
+### Estructura de las ramas principales en GitFlow
+
+El modelo se basa en cinco tipos de ramas con roles muy específicos:
+
+1. **`main` (o `master`)**
+* **Propósito:** Contiene el código oficial, estable y listo para producción. Cada commit en esta rama representa una versión oficial o lanzamiento (*release*) del software. Nadie programa directamente aquí.
+
+
+2. **`develop`**
+* **Propósito:** Es la rama de integración para el desarrollo. Aquí se unifican todas las nuevas funcionalidades desarrolladas por el equipo. Es el punto base desde donde nacen las ramas de características y las de preparación de lanzamientos.
+
+
+3. **`feature` (Funcionalidades)**
+* **Propósito:** Ramas temporales creadas a partir de `develop` para desarrollar una característica o tarea específica (por ejemplo, `feature/login-usuario`). Una vez terminada la funcionalidad, la rama se fusiona de vuelta en `develop` y se elimina.
+
+
+4. **`release` (Lanzamientos)**
+* **Propósito:** Ramas temporales que se ramifican desde `develop` cuando se aproxima el despliegue de una nueva versión a producción. Permiten realizar pruebas exhaustivas, ajustes menores de última hora y corrección de errores sin detener el avance del siguiente ciclo de desarrollo. Al finalizar, se fusionan tanto en `main` como en `develop`.
+
+
+5. **`hotfix` (Correcciones urgentes)**
+* **Propósito:** Ramas temporales que nacen directamente de `main` para solucionar un error crítico (*bug*) detectado en producción que no puede esperar al siguiente ciclo normal de lanzamiento. Una vez solucionado, se fusionan de inmediato tanto en `main` (para actualizar la versión en producción) como en `develop`.
+
+---

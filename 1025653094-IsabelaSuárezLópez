@@ -1,0 +1,79 @@
+RESPUESTAS:
+
+1. ¿Qué es Git y qué problema resuelve en el desarrollo de software?
+
+Git es un sistema de control de versiones distribuido, diseñado para rastrear los cambios en el código fuente durante el desarrollo de software.
+
+El problema que resuelve:
+Antes de Git, era común organizar proyectos mediante carpetas comprimidas con nombres como proyecto_v1, proyecto_v2_final, proyecto_definitivo_ahora_si.zip. Esto causaba enormes problemas:
+
+Pérdida de código: Si alguien borraba o rompía algo, recuperar versiones anteriores era sumamente difícil.
+
+Colaboración caótica: Trabajar en equipo significaba enviarse archivos por correo o USB, lo que provocaba que el trabajo de un compañero sobrescribiera el de otro (conflictos de código).
+
+Falta de trazabilidad: No saber quién hizo un cambio, cuándo lo hizo o por qué motivo exacto se implementó.
+
+Git soluciona esto manteniendo un historial completo, lineal y ramificado donde cada cambio (commit) queda registrado con su autor, fecha y descripción.
+
+2. Diferencias clave entre Git y GitHub
+
+Git es un software de control de versiones. Se instala de forma local en tu computadora y funciona completamente offline. Su propósito principal es rastrear los cambios en tu código fuente, registrar el historial de versiones y permitirte trabajar con ramas de manera local utilizando la terminal o comandos de consola.
+
+GitHub es una plataforma web en la nube. Funciona como un servicio de alojamiento para repositorios Git. Requiere conexión a internet para sincronizar el código y ofrece una interfaz gráfica visual en la web. Además, facilita enormemente la colaboración en equipo mediante herramientas como revisiones de código (Pull Requests), control de accesos, gestión de tareas (Issues) y despliegues integrados.
+
+3. ¿Qué es una nube de repositorios?
+
+Una nube de repositorios (o servicio de alojamiento de código) es una plataforma en la red que almacena copias remotas de tus proyectos controlados con Git. Funciona como un servidor centralizado seguro donde el equipo puede respaldar su código, sincronizar avances y revisar cambios de forma centralizada.
+
+Tres alternativas populares en el mercado:
+
+GitLab: Muy utilizado en entornos empresariales, destaca por sus potentes herramientas integradas de integración y despliegue continuo (CI/CD) y gestión de proyectos estilo Jira.
+
+Bitbucket: Desarrollado por Atlassian, es altamente valorado por su integración nativa con otras herramientas de la misma suite como Jira y Trello.
+
+Gitea / Forgejo: Alternativas de código abierto y autohospedadas, ideales para quienes prefieren mantener sus propios servidores de control de versiones con total privacidad.
+
+4. Glosario básico de Git
+
+Commit
+Definición: Es un registro o "fotografía" del estado de tus archivos en un momento dado dentro del historial del proyecto.
+
+Branch (Rama):
+Definición: Una línea de desarrollo independiente que te permite trabajar en una nueva funcionalidad o corregir un error sin alterar la versión principal del código.
+
+Merge (Fusión):
+Definición: El proceso de unir los cambios realizados en una rama con otra (por ejemplo, integrar tu rama de trabajo con la rama principal).
+
+Pull y Push:
+Definición: Push es enviar tus commits locales hacia el repositorio remoto en la nube; Pull es descargar y fusionar los cambios más recientes del repositorio remoto hacia tu máquina.
+
+Pull Request (PR):
+Definición: Una solicitud formal en la plataforma de alojamiento (como GitHub) para que los cambios de una rama sean revisados y aprobados antes de fusionarse en otra rama (generalmente main).
+
+Clone (Clonar):
+Definición: Copiar un repositorio remoto existente (con todo su historial y ramas) por primera vez en tu computadora local.
+
+Upstream y Origin:
+Definición: Origin es el alias predeterminado para el repositorio remoto original desde el cual clonaste tu proyecto (tu propio fork o repo). Upstream se refiere comúnmente al repositorio original de referencia (por ejemplo, el repositorio principal de una organización o proyecto open-source del cual hiciste una copia).
+
+5. La importancia de las ramas (Branches)
+Las ramas son el pilar fundamental para trabajar de forma ordenada. Permiten aislar tareas para que los cambios experimentales o en desarrollo no afecten el código estable.
+
+En el trabajo individual: Te permiten experimentar con nuevas tecnologías o funcionalidades complejas sabiendo que, si algo sale mal, puedes descartar la rama y volver a tu código base intacto sin arruinar tu avance previo.
+
+En equipo: Evitan que dos o más desarrolladores pisen el código de los demás. Cada integrante trabaja en su propia rama (feature/...), lo que permite que varios programadores desarrollen distintas partes de una aplicación al mismo tiempo de forma segura y organizada.
+
+6. ¿Qué es GitFlow?
+
+GitFlow es un modelo estructurado de organización de ramas para Git que define un marco estricto sobre cómo interactúan las diferentes ramas a lo largo del ciclo de vida del software.
+
+Estructura de sus ramas principales:
+master (o main): Contiene el código oficial que está en producción (la versión estable que ven los usuarios finales).
+
+develop: Es la rama de integración principal donde se acumulan las nuevas características listas para la siguiente versión.
+
+feature/*: Ramas temporales que nacen de develop y sirven para desarrollar funcionalidades específicas (ej. feature/autenticacion). Una vez terminadas, se fusionan de vuelta a develop.
+
+release/*: Ramas que se crean a partir de develop cuando se prepara una nueva versión para salir a producción. Permiten hacer ajustes menores de última hora y pruebas de calidad (QA).
+
+hotfix/*: Ramas de emergencia que nacen directamente de master para solucionar un error crítico en producción de inmediato, las cuales luego se fusionan tanto en master como en develop.

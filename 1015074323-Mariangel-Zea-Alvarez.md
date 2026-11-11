@@ -46,4 +46,8 @@ clone: Entras a un nuevo proyecto, copias el enlace de GitHub y escribes git clo
 
 upstream y su diferencia con origin: Si sacas una copia de un repositorio público para aportar mejoras, tu propia copia en la nube es origin, y el repositorio principal de la persona que creó el proyecto es el upstream.
 
+5: La importancia de las ramas (Branches): ¿Por qué se deben crear ramas en un proyecto de software? Expliquen para qué sirven y qué ventajas ofrecen tanto en el trabajo individual como en equipo.
+
+Las ramas (branches) son líneas de desarrollo independientes que permiten aislar el código en un repositorio para trabajar en nuevas funcionalidades, experimentos o correcciones de errores sin alterar la versión principal ni comprometer la estabilidad del sistema. Su uso es una de las prácticas más importantes en el control de versiones, ya que ofrecen ventajas fundamentales tanto en proyectos individuales como colaborativos. En el trabajo individual, permiten organizar las tareas por partes y probar cambios arriesgados con la total tranquilidad de que, si algo sale mal, la rama principal o de producción se mantiene intacta y se puede descartar el experimento sin dañar lo avanzado. Por su parte, en el trabajo en equipo, las ramas evitan que varios desarrolladores interfieran o sobrescriban el trabajo de los demás al mismo tiempo, permitiendo que cada quien desarrolle su tarea en su propia ruta aislada para luego unificar todo de forma segura mediante fusiones (merges) o revisiones de código (pull requests).
+
 

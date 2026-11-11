@@ -1,0 +1,5 @@
+1: ¿Qué es Git y qué problema resuelve en el desarrollo de software?
+Git es un sistema de control de versiones distribuido y de código abierto diseñado para registrar los cambios en el código fuente de un proyecto a lo largo del tiempo, facilitando el trabajo ordenado y colaborativo entre desarrolladores.
+
+En el desarrollo de software, esta herramienta resuelve problemas críticos como el caos de los archivos duplicados con nombres confuso, reemplazándolos por un historial estructurado de commits que permite auditar y revertir modificaciones. Asimismo, previene que los equipos se sobrescriban el trabajo al permitir el uso de ramas independientes que luego se fusionan de forma segura al tronco principal. Al ser distribuido, cada copia local almacena el historial completo del proyecto, evitando la pérdida de información ante fallos y sirviendo como respaldo junto con plataformas en la nube. Finalmente, simplifica el debugging al identificar con exactitud qué usuario, fecha y cambio introdujeron una línea específica de código.
+

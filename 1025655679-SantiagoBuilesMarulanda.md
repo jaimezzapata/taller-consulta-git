@@ -93,3 +93,29 @@ Una **nube de repositorios** es un servicio en línea que permite almacenar, res
 * **Ejemplo práctico:** 
     * Haces un *fork* de una librería famosa de código abierto en tu propio GitHub; ese repositorio personal en tu cuenta se convierte en tu `origin`.
     * Configuras el repositorio oficial del creador original como `upstream` (ej. `git remote add upstream <url-original>`) para poder descargar las actualizaciones que ellos vayan lanzando y mantener tu proyecto al día.
+
+**Pregunta 5 respuesta**
+
+# La Importancia de las Ramas (Branches)
+
+En el desarrollo de software, trabajar directamente sobre la rama principal (`main` o `master`) de forma constante es una mala práctica que pone en riesgo la estabilidad del proyecto. Las **ramas** son la solución fundamental de Git para evitar este problema.
+
+---
+
+## ¿Para qué sirven las ramas?
+
+Las ramas permiten **duplicar el estado actual de tu código de forma independiente**. Esto crea un espacio de trabajo aislado donde puedes experimentar, programar nuevas funciones o corregir errores sin alterar ni comprometer el código que ya funciona.
+
+---
+
+## Ventajas Clave
+
+### 1. En el Trabajo Individual
+* **Experimentación sin miedo:** Puedes probar nuevas librerías, diseños o lógicas complejas sabiendo que, si algo sale mal, puedes descartar la rama y tu código original estará intacto.
+* **Organización por tareas:** Te permite separar tu trabajo. Por ejemplo, puedes tener una rama para el diseño de la interfaz (`feature/ui`), otra para la conexión con la base de datos (`feature/database`) y otra para corregir un error urgente (`hotfix/login`).
+* **Código limpio y funcional:** La rama principal (`main`) siempre se mantiene limpia y lista para usarse, conteniendo únicamente código probado y estable.
+
+### 2. En el Trabajo en Equipo
+* **Desarrollo en paralelo:** Múltiples desarrolladores pueden trabajar simultáneamente en el mismo proyecto sin pisarse ni sobrescribir el trabajo de los demás, ya que cada uno lo hace en su propia rama aislada.
+* **Colaboración segura y revisión de código:** Facilita la creación de *Pull Requests*. Antes de que el código de una rama se una al proyecto principal, el equipo puede revisarlo, comentar sugerencias y aprobar los cambios de forma segura.
+* **Gestión de conflictos controlada:** Git ayuda a identificar y resolver discrepancias cuando dos personas modifican la misma línea de código, permitiendo decidir qué cambios conservar antes de fusionarlos definitivamente.

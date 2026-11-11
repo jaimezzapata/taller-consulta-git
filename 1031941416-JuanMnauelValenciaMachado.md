@@ -43,3 +43,32 @@
 ## Clone (Clonar): Descargar por primera vez un repositorio completo de GitHub a tu computadora.
 
 ## Origin y Upstream: Nombres de repositorios remotos. Origin es tu repositorio personal (de donde clonas o subes), y Upstream es el repositorio original del dueño principal en proyectos colaborativos externos.
+
+5. ¿Para qué sirven las ramas?
+
+## Las ramas sirven para aislar los cambios que realizas en el código. En lugar de modificar directamente la versión de producción o la rama principal (main o master), creas un entorno de trabajo paralelo donde puedes:
+
+## Desarrollar una nueva característica de principio a fin de forma controlada.
+
+## Investigar, probar y descartar soluciones experimentales sin compromiso.
+
+## Aislar la corrección de un error urgente (hotfix) mientras otras tareas siguen su curso en paralelo.
+
+*Ventajas en el Trabajo Individual*
+## Trabajar con ramas no es exclusivo de los equipos grandes; incluso en proyectos personales ofrece beneficios clave:
+
+## Experimentación sin miedo: Si una prueba o un cambio experimental rompe todo el código, puedes descartar la rama con un simple comando sin dañar tu progreso anterior ni arriesgar el funcionamiento estable.
+
+## Organización por objetivos: Te permite separar claramente cada tarea (por ejemplo, una rama para la interfaz de usuario, otra para la conexión a la base de datos). Esto facilita retomar el desarrollo después de unos días sabiendo exactamente en qué estabas enfocándote.
+
+## Historial limpio y trazable: Cada commit en una rama específica documenta de forma ordenada los pasos seguidos para resolver una tarea o implementar una característica concreta.
+
+*Ventajas en el Trabajo en Equipo*
+## Cuando se colabora con más desarrolladores, las ramas se convierten en la columna vertebral de la productividad y la calidad del software:
+
+## Desarrollo en paralelo (Concurrencia): Varios desarrolladores pueden trabajar al mismo tiempo en la misma base de código sin pisarse ni sobreescribir el trabajo de los demás, ya que cada uno opera en su propio espacio aislado (feature branch).
+
+## Revisiones de código seguras (Code Review / Pull Requests): Antes de integrar los cambios de una rama al tronco principal, el equipo puede revisar, probar y discutir las modificaciones, asegurando estándares de calidad y detectando bugs anticipadamente.
+
+## Protección de la rama principal (main): La rama principal se mantiene siempre limpia, estable y lista para producción, mientras que las pruebas, iteraciones y errores ocurren en entornos controlados y separados.
+

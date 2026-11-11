@@ -16,3 +16,5 @@ El problema fundamental que resuelve es el **caos en la colaboración y el histo
 
 ---
 
+Respuesta pregunta 2:
+**Git** es la herramienta fundamental: un sistema de control de versiones distribuido que se instala y funciona de forma local en tu ordenador. Su objetivo principal es resolver el caos en el desarrollo de software (como la pérdida de cambios, las versiones duplicadas o los conflictos al colaborar) registrando cada modificación realizada en el código y permitiendo trabajar en ramas independientes sin riesgo. Por su parte, **GitHub** es una plataforma web en la nube que utiliza el motor de Git para alojar repositorios en internet, ofreciendo una interfaz visual e herramientas de colaboración en equipo como Pull Requests, gestión de tareas y revisión de código. **Git es el motor de seguimiento que trabaja en tu equipo sin necesidad de internet, mientras que GitHub es el servicio en la nube donde compartes y sincronizas ese trabajo con otros desarrolladores.**
